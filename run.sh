@@ -7,4 +7,4 @@ fi
 
 IMG_NAME="$1"
 
-docker run -d -t --name $IMG_NAME $IMG_NAME:latest
+docker run -d --restart unless-stopped -t --name $IMG_NAME -v $(pwd)/scripts:/home/brian/scripts $IMG_NAME:latest
