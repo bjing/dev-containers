@@ -7,4 +7,9 @@ fi
 
 IMG_NAME="$1"
 
-docker run -d --restart unless-stopped -t --name $IMG_NAME -v $(pwd)/certs/:/opt/certs/ -v $(pwd)/scripts:/home/brian/scripts $IMG_NAME:latest
+docker run -d -t \
+    --restart unless-stopped \
+    --name $IMG_NAME \
+    -v $(pwd)/certs/:/opt/certs/ \
+    -v $(pwd)/scripts:/home/brian/scripts \
+    $IMG_NAME:latest

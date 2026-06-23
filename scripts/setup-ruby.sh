@@ -17,10 +17,10 @@ source ~/.bashrc
 rbenv install 4.0.5
 rbenv global 4.0.5
 
-# Set up certs for Ruby
-sudo cp /opt/certs/nscacert.pem /usr/local/share/ca-certificates/netskope.crt
-sudo update-ca-certificates
-ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'
-ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_DIR'
+# Set up certs for Ruby. Enable if your environment requires custom certs.
+# sudo cp /opt/certs/nscacert.pem /usr/local/share/ca-certificates/netskope.crt
+# sudo update-ca-certificates
+# ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'
+# ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_DIR'
 
 gem install jekyll bundler
